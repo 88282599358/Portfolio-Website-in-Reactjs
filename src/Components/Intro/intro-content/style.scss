@@ -1,0 +1,142 @@
+@import "../../../Style-Config/Variable.scss";
+@import "../../../Style-Config/Mixins.scss";
+
+.intro-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  .layout {
+    display: flex;
+    margin-top: 1.5%;
+    .left-col {
+      width: 45%;
+      padding: 70px;
+      @include medium-screen {
+        padding-top: 55px;
+      }
+      @include large-screen {
+        padding: 0px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        .small-text {
+          @include typography(2.4rem, 400, 2rem);
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .icon {
+            margin-left: 10px;
+          }
+        }
+        .big-text {
+          @include typography(2.5rem, 400, 4rem);
+        }
+      }
+      p {
+        @include typography(1.2rem, 300, 1.3rem);
+        color: $white;
+        margin: 20px 0px;
+        text-align: justify;
+      }
+    }
+    .right-col {
+      width: 55%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      @include large-screen {
+        width: 65%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        margin-bottom: 4rem;
+        @include large-screen {
+          margin-bottom: 50px;
+          position: relative;
+          right: 100px;
+        }
+      }
+      .highlights {
+        position: absolute;
+        border-radius: 6px;
+        @include glassmorphism-effect;
+        .icon {
+          width: 55px;
+          height: 55px;
+          min-width: 55px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: aqua;
+          font-size: 24px;
+          color: $black-light;
+        }
+        .text {
+          @include typography(1rem, 400, 1rem);
+          padding: 10px 10px;
+          color: $black-light;
+
+          span {
+            @include typography(2.4rem, 400, 2rem);
+          }
+        }
+        &.horizontal{
+            width: 190px;
+            height: 95px;
+            display: flex;
+            align-items: center;
+            top: 260px;
+            left: 0;
+            padding: 20px 10px 20px 20px;
+            margin-top: 6%;
+            @include medium-screen{
+              top: 250px;
+              left: 0;
+            }
+            @include large-screen{
+              top: 270px;
+              left: 120px;
+            }
+          }
+          &.vertical{
+            width: 115px;
+            height: 165px;
+            min-height: 165px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 50px;
+            right: 60px;
+            padding: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin-left: 65%;
+            @include medium-screen{
+            top: 50px;
+            right: inherit;
+          }
+          @include large-screen{
+            top: 85px;
+            right: -10px;
+          }
+          .text{
+            padding: 0 10px;
+            @include typography(1rem, 400,1rem);
+            color: $black-light;
+            margin-top: 10px;
+            span{
+              @include typography(14px 700 24px);
+              display: block; 
+              margin: 10px;
+              height: 1rem;
+            }  
+          }
+        }
+      }
+    }
+  }
+}

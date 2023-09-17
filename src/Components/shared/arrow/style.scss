@@ -1,0 +1,16 @@
+@import "../../../Style-Config/Variable.scss";
+@import "../../../Style-Config/Mixins.scss";
+
+.arrow-item{
+    width: 1.5rem;
+    height: 1.5rem;
+    background: aqua;
+    border-radius: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    svg{
+        transform: rotate(-45deg);
+    }
+}
